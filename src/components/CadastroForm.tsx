@@ -14,9 +14,13 @@ interface ILoginFormProps {
   ): void;
 }
 
-const LoginForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
+const CadastroForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [adress, setAdress] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [rePassword, setRePassword] = useState("");
 
   return (
     <Form
@@ -31,7 +35,7 @@ const LoginForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
         backgroundColor: "#fff",
       }}
     >
-      <Row style={{ marginTop: 0 }}>
+      <Row style={{ marginTop: 15 }}>
         <Col>
           <p
             style={{
@@ -43,8 +47,66 @@ const LoginForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
               textAlign: "center",
             }}
           >
-            Login
+            Cadastre-se
           </p>
+          <Form.Control
+            style={{
+              borderRadius: 50,
+              borderColor: "#E5E5E5",
+              color: "#AAA4A4",
+              padding: 8,
+              paddingLeft: 16,
+              borderWidth: 1,
+              fontSize: 14,
+            }}
+            type="name"
+            placeholder="Nome completo"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+          />
+        </Col>
+      </Row>
+
+      <Row style={{ marginTop: 15 }}>
+        <Col>
+          <Form.Control
+            style={{
+              borderRadius: 50,
+              borderColor: "#E5E5E5",
+              color: "#AAA4A4",
+              padding: 8,
+              paddingLeft: 16,
+              borderWidth: 1,
+              fontSize: 14,
+            }}
+            type="phone"
+            placeholder="Telefone"
+            value={phone}
+            onChange={(event) => setPhone(event.target.value)}
+          />
+        </Col>
+      </Row>
+      <Row style={{ marginTop: 15 }}>
+        <Col>
+          <Form.Control
+            style={{
+              borderRadius: 50,
+              borderColor: "#E5E5E5",
+              color: "#AAA4A4",
+              padding: 8,
+              paddingLeft: 16,
+              borderWidth: 1,
+              fontSize: 14,
+            }}
+            type="adress"
+            placeholder="Endereço"
+            value={adress}
+            onChange={(event) => setAdress(event.target.value)}
+          />
+        </Col>
+      </Row>
+      <Row style={{ marginTop: 15 }}>
+        <Col>
           <Form.Control
             style={{
               borderRadius: 50,
@@ -62,7 +124,6 @@ const LoginForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
           />
         </Col>
       </Row>
-
       <Row style={{ marginTop: 15 }}>
         <Col>
           <Form.Control
@@ -79,6 +140,25 @@ const LoginForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
             placeholder="Senha"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
+          />
+        </Col>
+      </Row>
+      <Row style={{ marginTop: 15 }}>
+        <Col>
+          <Form.Control
+            style={{
+              borderRadius: 50,
+              borderColor: "#E5E5E5",
+              color: "#AAA4A4",
+              padding: 8,
+              paddingLeft: 16,
+              borderWidth: 1,
+              fontSize: 14,
+            }}
+            type="password"
+            placeholder="Repita sua senha"
+            value={rePassword}
+            onChange={(event) => setRePassword(event.target.value)}
           />
         </Col>
       </Row>
@@ -107,9 +187,9 @@ const LoginForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
       <Row>
         <Col>
           <span style={{ fontSize: 14, color: "#AAA4A4" }}>
-            Ainda não tem um cadastro?{" "}
-            <Link style={{ color: "#FFE548" }} to="/cadastro">
-              Clique aqui.
+            Já possui um cadastro? Retorne ao{" "}
+            <Link style={{ color: "#FFE548" }} to="/">
+              Login.
             </Link>
           </span>
         </Col>
@@ -118,4 +198,4 @@ const LoginForm: React.FC<ILoginFormProps> = ({ handleSubmit }) => {
   );
 };
 
-export default LoginForm;
+export default CadastroForm;

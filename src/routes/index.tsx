@@ -7,6 +7,7 @@ import Cursos from "../pages/Cursos";
 import Homepage from "../pages/Homepage";
 import Marketing from "../pages/Marketing";
 import Mural from "../pages/Mural";
+import Perfil from "../pages/Perfil";
 
 const Routes: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const Routes: React.FC = () => {
       <Route exact path="/inicio" component={Homepage} />
       <Route exact path="/marketing" component={Marketing} />
       <Route exact path="/mural" component={Mural} />
+      <Route exact path="/perfil" component={Perfil} />
     </Switch>
   );
 };

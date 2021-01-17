@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 
 import EmBreveLayout from "../../layouts/CardEmBreve";
 
+import PersonIcon from "../../assets/person-icon.svg";
 import NumberOne from "../../assets/number-one.svg";
 import NumberTwo from "../../assets/number-two.svg";
 import NumberThree from "../../assets/number-three.svg";
@@ -34,7 +35,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
         <Row>
           <Image
             style={{ width: "3rem", height: "3rem" }}
-            src={NumberOne}
+            src={PersonIcon}
             width="100%"
           />
           <Row>
@@ -65,7 +66,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
         <Row>
           <Image
             style={{ width: "3rem", height: "3rem" }}
-            src={NumberOne}
+            src={PersonIcon}
             width="100%"
           />
           <Row>

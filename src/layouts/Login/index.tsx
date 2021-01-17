@@ -14,6 +14,8 @@ const Login: React.FC<ILoginLayoutProps> = ({ children, backgroundColor }) => {
     <Container
       style={{
         backgroundColor,
+        width: "100%",
+        height: "110vh",
       }}
       fluid
     >

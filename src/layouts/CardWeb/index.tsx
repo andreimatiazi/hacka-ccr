@@ -3,6 +3,7 @@ import React, { useCallback, useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import blackWomen from "../../assets/blackwomen.png";
 
 interface ILoginLayoutProps {
   chindren?: React.ReactNode;
@@ -13,8 +14,10 @@ const Web: React.FC<ILoginLayoutProps> = ({ children, title }) => {
   return (
     <Container
       style={{
-        backgroundColor: "#12C1BC",
-        height: "100vh",
+        backgroundImage: `url(${blackWomen})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        height: "100%",
       }}
       fluid
     >
@@ -35,8 +38,10 @@ const Web: React.FC<ILoginLayoutProps> = ({ children, title }) => {
           style={{
             borderColor: "#E5E5E5",
             borderStyle: "solid",
-            marginLeft: "30px",
-            marginRight: "30px",
+            marginLeft: "100px",
+            marginRight: "100px",
+            marginTop: 350,
+            marginBottom: 20,
             borderRadius: "57px",
             borderWidth: "1px",
             padding: "40px",

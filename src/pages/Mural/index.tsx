@@ -6,7 +6,6 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
 import EmBreveLayout from "../../layouts/CardEmBreve";
-import LoginForm from "../../components/LoginForm";
 
 import NumberOne from "../../assets/number-one.svg";
 import NumberTwo from "../../assets/number-two.svg";
@@ -14,7 +13,6 @@ import NumberThree from "../../assets/number-three.svg";
 import NumberFour from "../../assets/number-four.svg";
 import NumberFive from "../../assets/number-five.svg";
 import Row from "react-bootstrap/esm/Row";
-import blackWomen from "../../assets/blackwomen.png";
 
 interface ICardLayoutProps {
   navigate(route: string): void;
@@ -30,15 +28,70 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
           justifyContent: "center",
         }}
       >
-        <h1>Marketing</h1>
+        <h1>Mural</h1>
       </Col>
-      <p style={{ fontSize: 20, textAlign: "center", fontStyle: "normal" }}>
-        Marketing é a arte de explorar, criar e entregar valor para satisfazer
-        as necessidades do mercado. São usados produtos ou serviços que possam
-        interessar aos consumidores. A trilha de conhecimento sobre Marketing é
-        dividida em 5 etapas:
+      <Col>
+        <Row>
+          <Image
+            style={{ width: "3rem", height: "3rem" }}
+            src={NumberOne}
+            width="100%"
+          />
+          <Row>
+            <Col style={{ paddingLeft: 24 }}>
+              <p
+                style={{ fontSize: 20, fontStyle: "normal", marginBottom: -8 }}
+              >
+                Bruna das Couves
+              </p>
+              <span style={{ fontSize: 13, fontStyle: "normal", marginTop: 0 }}>
+                @joanadascouves
+              </span>
+            </Col>
+          </Row>
+        </Row>
+      </Col>
+      <p style={{ fontSize: 13, fontStyle: "normal", paddingTop: 12 }}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
       </p>
-      <Row>
+      <hr />
+      <Col>
+        <Row>
+          <Image
+            style={{ width: "3rem", height: "3rem" }}
+            src={NumberOne}
+            width="100%"
+          />
+          <Row>
+            <Col style={{ paddingLeft: 24 }}>
+              <p
+                style={{ fontSize: 20, fontStyle: "normal", marginBottom: -8 }}
+              >
+                Juliana dos Repolhos
+              </p>
+              <span style={{ fontSize: 13, fontStyle: "normal", marginTop: 0 }}>
+                @julianadosrepolhos
+              </span>
+            </Col>
+          </Row>
+        </Row>
+      </Col>
+      <p style={{ fontSize: 13, fontStyle: "normal", paddingTop: 12 }}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+      </p>
+      {/* <Row>
         <Col xs={1} md={1}></Col>
         <Col xs={2} md={2}>
           <div
@@ -191,7 +244,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
           </div>
         </Col>
         <Col xs={1} md={1}></Col>
-      </Row>
+      </Row> */}
     </EmBreveLayout>
   );
 };

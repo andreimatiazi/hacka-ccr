@@ -1,20 +1,10 @@
-import React, { useCallback } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 
 import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
 import WebLayout from "../../layouts/CardWeb";
-import LoginForm from "../../components/LoginForm";
-
-import Web from "../../assets/web-development.svg";
-import Marketing from "../../assets/digital-marketing.svg";
-import Venda from "../../assets/venda.svg";
-import Financas from "../../assets/financas.svg";
-import DataScience from "../../assets/data-science.svg";
 import Row from "react-bootstrap/esm/Row";
-import blackWomen from "../../assets/blackwomen.png";
 
 interface ICardLayoutProps {
   navigate(route: string): void;

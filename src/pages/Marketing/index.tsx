@@ -1,12 +1,9 @@
-import React, { useCallback } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";
-import Button from "react-bootstrap/Button";
 
 import EmBreveLayout from "../../layouts/CardEmBreve";
-import LoginForm from "../../components/LoginForm";
 
 import NumberOne from "../../assets/number-one.svg";
 import NumberTwo from "../../assets/number-two.svg";
@@ -14,7 +11,6 @@ import NumberThree from "../../assets/number-three.svg";
 import NumberFour from "../../assets/number-four.svg";
 import NumberFive from "../../assets/number-five.svg";
 import Row from "react-bootstrap/esm/Row";
-import blackWomen from "../../assets/blackwomen.png";
 
 interface ICardLayoutProps {
   navigate(route: string): void;

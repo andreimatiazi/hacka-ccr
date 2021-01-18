@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
+import { useHistory } from "react-router-dom";
 
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
@@ -8,11 +9,14 @@ import Image from "react-bootstrap/Image";
 
 import LogoMin from "../assets/logoMin.png";
 
-import { Link } from "react-router-dom";
-
 const NavBar: React.FC = () => {
+  const history = useHistory();
+
+  function handleClick() {
+    history.push("/");
+  }
   return (
-    <Navbar fixed="top" collapseOnSelect expand="lg" bg="white" style={{}}>
+    <Navbar fixed="top" collapseOnSelect expand="lg" bg="white">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Col xs={5} md={5}>
@@ -64,6 +68,7 @@ const NavBar: React.FC = () => {
                 variant="primary"
                 type="submit"
                 block
+                onClick={() => handleClick()}
               >
                 Entrar
               </Button>

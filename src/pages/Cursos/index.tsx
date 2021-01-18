@@ -1,4 +1,5 @@
-import React, { useCallback } from "react";
+import React from "react";
+
 import { useHistory } from "react-router-dom";
 
 import Col from "react-bootstrap/Col";
@@ -6,7 +7,6 @@ import Image from "react-bootstrap/Image";
 import Button from "react-bootstrap/Button";
 
 import WebLayout from "../../layouts/CardWeb";
-import LoginForm from "../../components/LoginForm";
 
 import Web from "../../assets/web-development.svg";
 import Marketing from "../../assets/digital-marketing.svg";
@@ -14,13 +14,17 @@ import Venda from "../../assets/venda.svg";
 import Financas from "../../assets/financas.svg";
 import DataScience from "../../assets/data-science.svg";
 import Row from "react-bootstrap/esm/Row";
-import blackWomen from "../../assets/blackwomen.png";
 
 interface ICardLayoutProps {
   navigate(route: string): void;
 }
 
-const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
+const Cursos: React.FC<ICardLayoutProps> = ({ navigate }) => {
+  const history = useHistory();
+
+  function handleClick() {
+    history.push("/marketing");
+  }
   return (
     <WebLayout>
       <Col
@@ -55,7 +59,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              onClick={() => navigate("/agendamento-de-consulta")}
+              onClick={() => navigate("/desenvolvimento")}
             >
               <Image src={Web} width="50%" />
             </button>
@@ -85,7 +89,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              onClick={() => navigate("/agendamento-de-consulta")}
+              onClick={() => handleClick()}
             >
               <Image src={Marketing} width="50%" />
             </button>
@@ -113,7 +117,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              onClick={() => navigate("/agendamento-de-consulta")}
+              onClick={() => navigate("/vendas")}
             >
               <Image src={Venda} width="50%" />
             </button>
@@ -141,7 +145,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              onClick={() => navigate("/agendamento-de-consulta")}
+              onClick={() => navigate("/financas")}
             >
               <Image src={Financas} width="50%" />
             </button>
@@ -169,7 +173,7 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
                 alignItems: "center",
                 justifyContent: "center",
               }}
-              onClick={() => navigate("/agendamento-de-consulta")}
+              onClick={() => navigate("/data-science")}
             >
               <Image src={DataScience} width="50%" />
             </button>
@@ -214,4 +218,4 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
   );
 };
 
-export default Homepage;
+export default Cursos;

@@ -1,5 +1,4 @@
-import React, { useCallback } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
 
 import Col from "react-bootstrap/Col";
 import Image from "react-bootstrap/Image";

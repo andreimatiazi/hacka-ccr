@@ -23,7 +23,7 @@ const Login: React.FC = () => {
       // Enviar para API
       console.log(email, password); // Apenas para não esquercer nas deps
 
-      history.push("/inicio");
+      history.push("/perfil");
     },
     [history]
   );

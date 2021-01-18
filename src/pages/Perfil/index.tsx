@@ -229,12 +229,12 @@ const Homepage: React.FC<ICardLayoutProps> = ({ navigate }) => {
                     marginBottom: -8,
                   }}
                 >
-                  Juliana dos Repolhos
+                  Luiza Helena Trajano
                 </p>
                 <span
                   style={{ fontSize: 13, fontStyle: "normal", marginTop: 0 }}
                 >
-                  @julianadosrepolhos
+                  @luizahelena
                 </span>
                 <Row style={{ marginTop: 15 }}>
                   <Col>
